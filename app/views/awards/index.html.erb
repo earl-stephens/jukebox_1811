@@ -1,0 +1,13 @@
+<% @awards.each do |award| %>
+  <%= award.name %>
+<% end %>
+
+<% if @administrator %>
+    <%= form_for [@admin, @new_award] do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.submit %>
+    <% end %>
+<% end %>
